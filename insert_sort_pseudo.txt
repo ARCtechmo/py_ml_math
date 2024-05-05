@@ -1,0 +1,45 @@
+// pseudocode for the insertion sort algorithm
+InsertionSort(array)
+    n = length(array)
+    for i from 1 to n-1 do
+        key = array[i]
+        j = i - 1
+        while j >= 0 and array[j] > key do
+            array[j + 1] = array[j]
+            j = j - 1
+        array[j + 1] = key
+
+// Explanation of the pseudocode
+// Initialize and name the function 
+InsertionSort(array)
+    // initialize the variable n to store the length of the array
+    // n is the number of elements in the array
+    n = length(array) 
+    
+    // Iteration Section
+    // loop over each element of the array 
+    // loop starts with the 2nd element (index 1) to the last element (index n-1)
+    // assign the value of the current element to the variable called 'key'
+    // comapre and move 'key' to its correct position in the sorted portion of the array
+    // initialize another variable 'j' 
+    // 'j' stores the index of the element to the left of the current element 'i'
+    for i from 1 to n-1 do
+        key = array[i]
+        j = i -1
+
+    // Insertion Section
+    // create a loop that continues as long as the following occurs:
+    // 'j' is >=0 and the element at index 'j' is > key
+    while j >=0 and array[j] > key do
+
+        // if the element at index 'j' > 'key', shift the element to the right
+        // shifting right makes space for the 'key'
+        array[j + 1 ] = array[j]
+
+        // decrement 'j' to move lefwards in the array
+        j = j-1
+
+    // insert the 'key' into the array at index 'j + 1'
+    // this happens once we find the correct position for the 'key'
+    // conditinos: j<0 or the element at 'j' <= 'key'
+    array[j + 1] = key
